@@ -169,6 +169,11 @@ class AddressBook
                 break;
         }
     }
+    SortByFirstName(contactBook)
+    {
+        contactBook.sort();
+        console.log(contactBook);
+    }
             
 }
 module.exports = AddressBook;
