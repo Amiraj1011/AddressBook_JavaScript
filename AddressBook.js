@@ -104,7 +104,39 @@ class AddressBook
             }
         });
         return contactBook;    
-     }         
+     } 
+     //This function for search contact by city or state name
+     SearchContactByCityOrState(contactBook) 
+     {
+        console.log("1: search by City");
+        console.log("2: search by State");
+        let choice = parseInt(prompt("Enter your choice : "));
+
+        switch (choice) 
+        {
+            case 1:
+                let city = prompt("Enter the City you want to search the person for : ");
+                contactBook.forEach(element => {
+                    if (element.city == city) 
+                    {
+                        console.log(element);
+                    }
+                });
+                break;
+            case 2:
+                let state = prompt("Enter the State you want to search the person for : ");
+                contactBook.forEach(element => {
+                    if (element.state == state) 
+                    {
+                        console.log(element);
+                    }
+                });
+                break;
+            default:
+                console.log("Invalid Input");
+                break;
+        }
+    }        
 }
 module.exports = AddressBook;
 
