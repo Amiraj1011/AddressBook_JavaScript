@@ -9,7 +9,7 @@ while(flag)
 {
     console.log(" Select your option ")
     console.log();
-    console.log(" 1 : Add Contact \n 2 : Display Contact \n 3 : Edit Contact \n 0 : Exit ");
+    console.log(" 1 : Add Contact \n 2 : Display Contact \n 3 : Edit Contact \n 4 : Delete Contact \n 0 : Exit ");
     let choice = parseInt(prompt("Enter your Choice : "));
 
     switch(choice)
@@ -22,6 +22,9 @@ while(flag)
             break;
         case 3:
             contactBook = addressBook.EditContact(contactBook);
+            break;
+        case 4:
+            contactBook = addressBook.DeleteContact(contactBook);
             break;
         case 0:
             flag = false;

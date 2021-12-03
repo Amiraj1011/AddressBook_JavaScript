@@ -22,9 +22,7 @@ class AddressBook
             contact.phoneNumber = prompt("Enter Phone Number : ");
             contact.emailId = prompt("Enter Email Id : ");
             contactBook.push(contact);
-
             return contactBook;
-
         }
         catch(e)
         {
@@ -40,7 +38,6 @@ class AddressBook
             if ((element.firstName === fName) ==true)
             {
                 let contact = new ContactDetails();
-
                 contact.firstName = prompt("Enter First Name : ");
                 element.firstName = contact.firstName;
                 contact.lastName = prompt("Enter Last Name : ");
@@ -61,13 +58,28 @@ class AddressBook
             else
             {
                 console.log("No contact present with this name")
-            }
-        
+            }      
         });
         return contactBook;
     }
-
-            
+     //This methhod for delete contact
+     DeleteContact(contactBook)
+     {
+        let fName = prompt("Enter First Name of contact : ");
+        contactBook.forEach(element => {
+            if ((element.firstName === fName) ==true)
+            {
+                let index = contactBook.indexOf(fName);
+                contactBook.splice(index, 1);
+                console.log("Contact is deleted");
+            } 
+            else
+            {
+                console.log("No contact present");
+            }
+        });
+        return contactBook;    
+     }         
 }
 module.exports = AddressBook;
 
