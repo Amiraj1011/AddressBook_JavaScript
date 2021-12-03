@@ -1,9 +1,10 @@
-const PersonInformation = require("./AddressBook.js"); 
+//importing class
 const ContactDetails = require("./ContactDetails.js");
 const prompt = require('prompt-sync')();
 
+//Add data to contact
 let contact = new ContactDetails();
-
+//User input
 contact.firstName = prompt("Enter First Name : ");
 contact.lastName = prompt("Enter Last Name : ");
 contact.address = prompt("Enter Address : ");
