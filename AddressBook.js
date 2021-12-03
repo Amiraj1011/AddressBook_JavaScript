@@ -136,7 +136,8 @@ class AddressBook
                 console.log("Invalid Input");
                 break;
         }
-    }        
+    }
+            
 }
 module.exports = AddressBook;
 
