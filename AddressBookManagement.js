@@ -32,6 +32,9 @@ while(flag)
         case 6:
             contactBook = addressBook.SearchContactByCityOrState(contactBook);
             break;
+        case 7:
+            contactBook = addressBook.CountContactByCityOrState(contactBook);
+            break;
         case 0:
             flag = false;
             break;
