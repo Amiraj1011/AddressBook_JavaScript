@@ -10,6 +10,7 @@ class AddressBook
     {
         //Add data to contact
         let contact = new ContactDetails();
+        let flag = false;
         //User input
         try
         {
@@ -22,6 +23,30 @@ class AddressBook
             contact.phoneNumber = prompt("Enter Phone Number : ");
             contact.emailId = prompt("Enter Email Id : ");
             contactBook.push(contact);
+
+            if(contactBook.length < 0) 
+            {
+                contactBook.push(contact);
+            } 
+            else if (contactBook.length >= 0) 
+            {
+                contactBook.forEach(element => {
+                    if( (element.firstName === contact.firstName ) == true ) 
+                    {
+                        flag = true;
+                        return;
+                    }
+                });
+                if( flag == true ) 
+                {
+                    console.log();
+                    console.log("Duplicate Entry is found");
+                } 
+                else 
+                {
+                    contactBook.push(contact);
+                }
+            }  
             return contactBook;
         }
         catch(e)
