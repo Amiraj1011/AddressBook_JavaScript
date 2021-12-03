@@ -1,4 +1,5 @@
-class ContactDetailsss
+
+class ContactDetails
 {
     //property
     firstName;
@@ -9,6 +10,18 @@ class ContactDetailsss
     zip;
     phoneNumber;
     emailId;
+
+    constructor (firstName, lastName, address, city, state, zip, phoneNumber, emailId)
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.city = city;
+        this.state = state;;
+        this.zip = zip;
+        this.phoneNumber = phoneNumber;
+        this.emailId = emailId;
+    }
 
     //getter setter methods
     get firstName()
@@ -163,4 +176,4 @@ class ContactDetailsss
     
 }
 
-module.exports = ContactDetailsss;
+module.exports = ContactDetails;
